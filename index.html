@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+
+<body>
+    <div id="root">Not Rendered</div>
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script>
+
+        // ------This is how we do using JavaScript-------
+        // let heading = document.createElement('h2');
+        // heading.innerHTML = "This is heading 2";
+        // let root = document.getElementById("root");
+        // root.appendChild(heading);
+
+
+        // this is how we can create and nest Element using React
+        let heading = React.createElement(
+            "h1",
+            {
+                id: "heading1",
+                className: "h1"
+            },
+            "This is heading1",
+            React.createElement(
+                "p",
+                {
+                    id:"para"
+                },
+                "This is paragraph inside h1",
+            )
+        );
+        let heading2 = React.createElement(
+            "h2",
+            {
+                id: "heading2",
+                className: "h2"
+            },
+            "This is heading2"
+        );
+
+        let div1 = React.createElement(
+            "div",
+            {
+                id: "root-div"
+            },
+            [heading, heading2]
+        );
+
+
+        let root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(heading);
+    </script>
+</body>
+
+</html>
