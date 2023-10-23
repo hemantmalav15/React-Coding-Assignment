@@ -1,3 +1,5 @@
+import React from "react";
+import  ReactDOM from "react-dom/client";
 // this is how we can create and nest Element using React
 {
     /* lets say we want to create this 
