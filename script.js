@@ -32,10 +32,31 @@ const container = (
 // }
 
 // Both are same thing -> we can skip return and curly braces
-const Header = () => (
-    <h1>Namaste React</h1>
-);
+// const Header = () => (
+//     <h1>Namaste React</h1>
+// );
 
+const styleObj = {
+    display: "flex",
+    justifyContent: "space-between"
+}
+const styleObj2 = {
+    display: "flex",
+    justifyContent: "space-between",
+    listStyleType: "none",
+}
+// lets create a header 
+const Header = () => (
+    <div className="header" style={styleObj}>
+        <h1 className="logo">Namaste React</h1>
+        <ul className="list" style={styleObj2}>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+    </div>
+)
 
 let root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Header />);
