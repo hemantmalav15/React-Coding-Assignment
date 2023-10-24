@@ -1,15 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 li{
     list-style: none;
 }
 .header{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
     border: 1px solid;
+    margin: 10px;
     /* box-shadow: 2px 2px 5px black; */
 }
 .nav-items{
@@ -17,11 +13,6 @@ li{
 }
 .nav-items > li{
     padding: 10px;
-}
-.nav-items > li:hover{
-    background-color: silver;
-    cursor: pointer;
-    transition: all 0.5s ease-out;
 }
 .logo:hover{
     cursor: pointer;
@@ -40,4 +31,7 @@ li{
 }
 .restaurant-card > img{
     width: 100%;
+}
+.search-input{
+    margin: 0 10px;
 }
