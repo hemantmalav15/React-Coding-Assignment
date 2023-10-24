@@ -8,6 +8,7 @@ const Body = () => {
             restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
         ))
     }
+    const [filteredRestaurant, setFilteredRestaurant] = useState(restaurantList);
     const [restaurants, setRestaurants] = useState(restaurantList);
     const [searchText, setSearchText] = useState("");
     return (
@@ -21,16 +22,16 @@ const Body = () => {
                     setSearchText(e.target.value);
                 }} />
             <button className="search-btn" onClick={() => {
-                const data = filterData(searchText, restaurant);
+                const data = filterData(searchText, restaurants);
                 // console.log(data)
-                setRestaurants(data);
+                setFilteredRestaurant(data);
             }}
             >
                 Search
             </button>
 
             <div className="restaurant-list">
-                {restaurants.map((restaurant) => {
+                {filteredRestaurant.map((restaurant) => {
                     return <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
                 })}
             </div>
