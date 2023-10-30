@@ -1,3 +1,7 @@
+body{
+    max-width: 80vw;
+    margin: 0 auto;
+}
 li{
     list-style: none;
 }
@@ -22,6 +26,7 @@ li{
 /* Restaurant  */
 .restaurant-list{
     display: flex;
+    flex-wrap: wrap;
 }
 .restaurant-card{
     border: 1px solid;
